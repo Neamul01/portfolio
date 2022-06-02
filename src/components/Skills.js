@@ -55,9 +55,9 @@ const Skills = () => {
         }
     ]
     return (
-        <section class="bg-gray-100 dark:bg-gray-900 py-12">
+        <section class="bg-gray-600 dark:bg-gray-900 py-12 text-white">
             <div class="container px-6 py-10 mx-auto">
-                <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">My <span class="text-blue-500 hover:italic cursor-move">Skills</span></h1>
+                <h1 class="text-3xl font-semibold text-center text-white capitalize lg:text-4xl dark:text-white">My <span class="text-blue-500 hover:italic cursor-move">Skills</span></h1>
 
                 <div class="grid grid-cols-1 gap-4 mt-12 md:mt-24 md:gap-6 md:grid-cols-3 xl:grid-cols-4">
                     {

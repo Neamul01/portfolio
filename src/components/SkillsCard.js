@@ -3,7 +3,7 @@ import React from 'react';
 const SkillsCard = ({ skill }) => {
     const { name, description, icon } = skill;
     return (
-        <div class="flex flex-col items-center p-6 py-4 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800 overflow-hidden cursor-pointer custom-box-shadow custom-animation">
+        <div class="flex flex-col items-center p-6 py-4 space-y-3 text-center bg-gray-300 rounded-xl dark:bg-gray-800 overflow-hidden cursor-pointer shadow-lg shadow-white custom-animation">
             <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
                 {icon}
             </span>

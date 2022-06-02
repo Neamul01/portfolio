@@ -10,7 +10,7 @@ const Banner = () => {
                     <p class="py-6">
                         I am a Pationate web developer. Web Development is my pation programming is my everyday must working routin.
                     </p>
-                    <button className="btn bg-gray-800">Download CV</button>
+                    <button className="btn bg-secondary">Download CV</button>
                 </div>
                 <div class="card m-0 p-0 flex-shrink-0 w-full max-w-sm shadow-2xl">
                     <div class="card-body">

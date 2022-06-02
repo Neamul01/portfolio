@@ -5,15 +5,19 @@ module.exports = {
       {
         mytheme: {
           primary: "#3B82FC",
-          secondary: "rgb(249, 115, 22)",
-          accent: "#37cdbe",
-          neutral: "#3d4451",
+          secondary: "rgb(200, 115, 22)",
+          accent: "#F4BFBF",
+          neutral: "#8CC0DE",
+          footer: '#000000',
           "base-100": "#ffffff",
         },
       },
       "dark",
       "cupcake",
     ],
+    fontFamily: {
+      Lato: ["Lato', sans-serif"],
+    },
   },
   plugins: [require("daisyui")],
 }

@@ -5,22 +5,33 @@
     box-shadow: 26px 26px 39px #585b63, -26px -26px 39px #ffffff;
 }
 
+.custom-animation {
+    transition: text-color 1s ease-in-out, background-color 1s ease-in-out;
+}
+
 .custom-animation:hover {
-    background: rgb(56, 56, 166);
+    background-color: rgb(56, 56, 166);
     color: rgb(255, 255, 255);
-    transition: 1s ease-in-out;
+
 }
 
 .custom-animation:hover p {
     color: rgb(255, 255, 255);
+    transition: 0.8s ease-in-out;
 }
 
 .custom-animation:hover h2 {
     color: rgb(255, 255, 255);
+    transition: 0.8s ease-in-out;
+}
+
+.zom {
+    transition: transform 1s ease-out, background-color 1s ease-out;
+    /* transition: background-color 1s ease-out; */
 }
 
 .zom:hover {
-    transform: scale(150%);
-    background: rgb(66, 142, 243);
-    transition: 1s ease-out;
+    transform: scale(120%);
+    background-color: rgb(66, 142, 243);
+    /* transition: scale(120%) 1s ease-in-out; */
 }

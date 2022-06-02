@@ -11,12 +11,12 @@ const Banner = () => {
                     <p class="py-6">
                         I am a Pationate web <span className="font-bold">developer</span>. Web Development is my pation programming is my everyday must working routin.
                     </p>
-                    <button className="btn bg-secondary custom-box-shadow mt-6 hover:italic hover:bg-gray-900">Download CV</button>
+                    <button className="btn bg-secondary custom-box-shadow mt-6 hover:italic hover:bg-primary transition-background-color 1s ease-out hover:border-none">Download CV</button>
                 </div>
-                <div class="card m-0 p-0 flex-shrink-0 w-full max-w-sm custom-box-shadow">
-                    <div class="card-body zom ">
-                        <img className='w-full' src="Noman.png" alt="Profile" />
-                    </div>
+                <div class="card m-0 p-0 flex-shrink-0 w-full hover:cursor-zoom-in max-w-sm custom-box-shadow  zom" >
+                    {/* <div class="card-body "> */}
+                    <img className='w-full' src="Noman.png" alt="Profile" />
+                    {/* </div> */}
                 </div>
             </div>
         </section >

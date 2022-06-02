@@ -1,15 +1,15 @@
 import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
-import { BiPhone } from 'react-icons/bi';
-// import { BsLinkedin } from 'react-icons/bs';
+import { AiFillMail, AiFillPhone } from 'react-icons/ai';
 
 
 const Footer = () => {
     return (
-        <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <footer class="footer footer-center p-10 bg-gray-600 text-white rounded ">
             <div class="grid grid-flow-col gap-4">
-                <p className='flex justify-center items-center gap-2'><BiPhone />+8801865636932</p>
+                <p className='flex justify-center items-center gap-2 text-base pr-4 border-r-4 border-black'><AiFillPhone />+8801865636932</p>
+                <p className='flex justify-center items-center gap-2 text-base'><AiFillMail />neamulhaque3298@gmail.com</p>
             </div>
             <div>
                 <div class="grid grid-flow-col justify-center items-center gap-8">

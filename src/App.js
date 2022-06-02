@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Skills from './components/Skills';
 import WorkSlider from './components/WorkSlider';
 import "swiper/css/bundle";
+import Footer from './components/Footer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <Skills />
       <WorkSlider />
+      <Footer />
     </div>
   );
 }

@@ -7,14 +7,14 @@ const Banner = () => {
             <div class=" max-w-screen-lg hero-content flex-col-reverse lg:flex-row-reverse gap-16">
                 <div class="text-center lg:text-left">
                     <p><span className=''>Hello,</span></p>
-                    <h1 class="text-5xl font-bold">I am Neamul</h1>
+                    <h1 class="text-5xl font-bold"><span className='hover:italic'>I am Neamul</span></h1>
                     <p class="py-6">
-                        I am a Pationate web developer. Web Development is my pation programming is my everyday must working routin.
+                        I am a Pationate web <span className="font-bold">developer</span>. Web Development is my pation programming is my everyday must working routin.
                     </p>
-                    <button className="btn bg-secondary custom-box-shadow">Download CV</button>
+                    <button className="btn bg-secondary custom-box-shadow mt-6 hover:italic hover:bg-gray-900">Download CV</button>
                 </div>
                 <div class="card m-0 p-0 flex-shrink-0 w-full max-w-sm custom-box-shadow">
-                    <div class="card-body ">
+                    <div class="card-body zom ">
                         <img className='w-full' src="Noman.png" alt="Profile" />
                     </div>
                 </div>

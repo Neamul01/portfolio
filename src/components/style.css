@@ -6,12 +6,19 @@
 }
 
 .custom-animation {
-    transition: text-color 1s ease-in-out, background-color 1s ease-in-out;
+    transition: text-color 1s ease-in-out, background-color 0.8s ease-in-out;
 }
 
 .custom-animation:hover {
     background-color: rgb(56, 56, 166);
     color: rgb(255, 255, 255);
+
+}
+
+.custom-animation:hover button {
+    background-color: rgb(56, 56, 166);
+    color: rgb(255, 255, 255);
+    font-style: italic;
 
 }
 

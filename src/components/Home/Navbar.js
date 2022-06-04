@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [showState, setShowState] = useState(false);
@@ -32,13 +33,17 @@ const Navbar = () => {
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4">
 
-                                <a href="!#" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+                                <HashLink to="/path#skills"
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Skills</HashLink>
 
-                                <a href="!#" className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                                <HashLink to="/path#projects"
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</HashLink>
 
-                                <a href="!#" className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                                <HashLink to="/path#contact"
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</HashLink>
 
-                                <a href="!#" className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                                <HashLink to="/path#hash"
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</HashLink>
                             </div>
                         </div>
                     </div>

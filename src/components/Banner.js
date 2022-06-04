@@ -11,7 +11,8 @@ const Banner = () => {
             <div class=" max-w-screen-xl hero-content flex-col-reverse lg:flex-row gap-16">
                 <div class="text-center lg:text-left">
                     <p><span className='font-lato'>Hello,</span></p>
-                    <h1 class="text-5xl font-bold font-serif"><span className='hover:italic'>I am Neamul</span> <br /> <span className='text-secondary block py-6'>MERN Stack Web Developer</span> </h1>
+                    <h1 class="text-5xl font-bold font-serif"><span className='italic'>I am Neamul</span> <br /> <span className='text-secondary block py-6 '>MERN Stack Web Developer</span> </h1>
+                    <div className='text-effect'></div>
                     <p class="py-6 pr-44 font-mono">
                         I am a Pationate web <span className="font-bold">developer</span>. Web Development is my pation programming is my everyday must working routin.
                     </p>

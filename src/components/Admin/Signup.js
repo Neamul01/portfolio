@@ -1,26 +1,22 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../Shared/LoadingSpinner';
 
-const Login = () => {
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
+const Signup = () => {
+
+    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const navigate = useNavigate();
 
     const onSubmit = async data => {
         console.log(data)
-        await signInWithEmailAndPassword(data.email, data.password);
-        toast.success('Login successfull...')
+        await createUserWithEmailAndPassword(data.email, data.password);
+        toast.success('User Create successfull... /n Please check your email to varify account')
     };
 
     if (user) {
@@ -100,4 +96,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;

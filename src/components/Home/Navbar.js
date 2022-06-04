@@ -45,8 +45,6 @@ const Navbar = () => {
                                 <HashLink to="#contact"
                                     scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</HashLink>
 
-                                <HashLink to="#hash"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</HashLink>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,13 @@
 import React from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Login = () => {
+    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
+
+    const handleLogin = () => {
+
+    }
     return (
         <section className="w-full max-w-sm p-6 m-auto my-12 bg-white rounded-md shadow-md dark:bg-gray-800">
             <h1 className="text-3xl font-semibold text-center text-gray-700 dark:text-white">Admin</h1>

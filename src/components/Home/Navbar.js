@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
-    const [showMoble, setShowMoble] = useState(false)
+    const [showMoble, setShowMoble] = useState(false);
+    const [user] = useAuthState(auth);
 
     return (
         <nav className="bg-neutral sticky top-0 z-50 ">
@@ -26,10 +30,10 @@ const Navbar = () => {
                     </div>
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                         <div className="flex-shrink-0 flex items-center">
-                            <HashLink to={'#banner'}
+                            <HashLink to={'/#'}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
                                 className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" > N</HashLink>
-                            <HashLink to={'#banner'}
+                            <HashLink to={'/#'}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
                                 className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow">Neamul</HashLink>
                         </div>
@@ -37,22 +41,24 @@ const Navbar = () => {
                             <div className="flex space-x-4">
 
                                 <HashLink to="#skills"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Skills</HashLink>
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Skills
+                                </HashLink>
 
                                 <HashLink to="#projects"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</HashLink>
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects
+                                </HashLink>
 
                                 <HashLink to="#contact"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</HashLink>
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact
+                                </HashLink>
+                                {
+                                    user
+                                    &&
+                                    <Link to='/dashboard' className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</Link>
+                                }
 
                             </div>
                         </div>
-                    </div>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-
-                        {/* <!-- Profile dropdown --> */}
-
                     </div>
                 </div>
             </div>

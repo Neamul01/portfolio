@@ -5,6 +5,7 @@ import Navbar from './components/Home/Navbar';
 import Footer from './components/Home/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/Admin/Login';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='admin' element={<Login />} />
       </Routes>
       <Footer />
+      <Toaster />
     </div>
   </>
   );

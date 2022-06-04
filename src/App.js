@@ -1,19 +1,15 @@
 import './App.css';
-import Banner from './components/Banner';
-import Navbar from './components/Navbar';
-import Skills from './components/Skills';
-import WorkSlider from './components/WorkSlider';
 import "swiper/css/bundle";
-import Footer from './components/Footer';
+import Home from './components/Home/Home';
+import Footer from './components/Home/Footer';
+import Navbar from './components/Home/Navbar';
 
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Banner />
-      <Skills />
-      <WorkSlider />
+      <Home />
       <Footer />
     </div>
   );

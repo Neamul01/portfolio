@@ -1,3 +1,4 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -5,11 +6,13 @@ import auth from '../../firebase.init';
 const Dashboard = () => {
     const [user] = useAuthState(auth);
 
+    const handleLogOur = () => {
+        signOut(auth);
+    }
 
     return (
 
         <div className="flex flex-col w-64 h-screen px-4 py-8 bg-white border-r dark:bg-gray-800 dark:border-gray-600">
-
             <div className="flex flex-col items-center mt-6 -mx-2">
                 <img className="object-cover w-24 h-24 mx-2 rounded-full" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar" />
                 <h4 className="mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">{user?.displayName || 'User'}</h4>
@@ -68,7 +71,7 @@ const Dashboard = () => {
                             <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
 
-                        <span className="mx-4 font-medium">Settings</span>
+                        <span onClick={handleLogOur} className="mx-4 font-medium">LogOut</span>
                     </a>
                 </nav>
 

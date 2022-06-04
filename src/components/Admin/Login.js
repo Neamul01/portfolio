@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -24,9 +24,11 @@ const Login = () => {
         toast.success('Login successfull...')
     };
 
-    if (user) {
-        navigate('/')
-    }
+    useEffect(() => {
+        if (user) {
+            navigate('/')
+        }
+    }, [user, navigate])
     if (error) {
         toast.error(error?.message)
     }
@@ -65,8 +67,8 @@ const Login = () => {
                 </div>
             </form>
             <SocialLogin />
-            <p className="mt-8 text-xs font-light text-center text-gray-400"> Don't have an account? <Link to={'/signup'}
-                className="font-medium text-gray-700 dark:text-gray-200 hover:underline">Create One</Link>
+            <p className="mt-8 text-xs font-light text-center text-gray-400"> You want to be a Admin? <Link to={'/signup'}
+                className="font-medium text-gray-700 dark:text-gray-200 hover:underline">Register</Link>
             </p>
         </section>
     );

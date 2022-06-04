@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
+import LoadingSpinner from '../Shared/LoadingSpinner';
 
 const SocialLogin = () => {
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    const navigate = useNavigate();
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle();
+    }
+    useEffect(() => {
+        if (user) {
+            navigate('/')
+        }
+    }, [user, navigate])
+    if (error) {
+        toast.error(error?.message)
+    }
+    if (loading) {
+        return <LoadingSpinner />
+    }
+
     return (
         <div>
             <div className="flex items-center justify-between mt-4">
@@ -13,6 +37,7 @@ const SocialLogin = () => {
 
             <div className="flex items-center mt-6 -mx-2">
                 <button type="button"
+                    onClick={handleGoogleSignIn}
                     className="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:bg-blue-400 focus:outline-none">
                     <svg className="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
                         <path

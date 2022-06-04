@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../Shared/LoadingSpinner';
 import SocialLogin from './SocialLogin';
 
@@ -20,9 +20,11 @@ const Signup = () => {
         toast.success('User Create successfull... /n Please check your email to varify account')
     };
 
-    if (user) {
-        navigate('/')
-    }
+    useEffect(() => {
+        if (user) {
+            navigate('/')
+        }
+    }, [user, navigate])
     if (error) {
         toast.error(error?.message)
     }
@@ -32,7 +34,7 @@ const Signup = () => {
 
     return (
         <section className="w-full max-w-sm p-6 m-auto my-12 bg-white rounded-md shadow-md dark:bg-gray-800">
-            <h1 className="text-3xl font-semibold text-center text-gray-700 dark:text-white">Admin</h1>
+            <h1 className="text-3xl font-semibold text-center text-gray-700 dark:text-white">SignUp as a Admin</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
                 <div>
@@ -61,8 +63,8 @@ const Signup = () => {
                 </div>
             </form>
             <SocialLogin />
-            <p className="mt-8 text-xs font-light text-center text-gray-400"> Don't have an account? <a href="!#"
-                className="font-medium text-gray-700 dark:text-gray-200 hover:underline">Create One</a></p>
+            <p className="mt-8 text-xs font-light text-center text-gray-400"> Are you a Admin <Link to={"/admin"}
+                className="font-medium text-gray-700 dark:text-gray-200 hover:underline">Login</Link></p>
         </section>
     );
 };

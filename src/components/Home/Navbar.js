@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
-    const [showState, setShowState] = useState(false);
     const [showMoble, setShowMoble] = useState(false)
 
     return (
         <nav className="bg-neutral sticky top-0 z-50 ">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                <div className="relative flex items-center justify-between h-16">
+                <div className="relative flex items-center justify-between h-14">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         {/* <!-- Mobile menu button--> */}
                         <button
@@ -25,24 +24,28 @@ const Navbar = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                         <div className="flex-shrink-0 flex items-center">
-                            <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
-                            <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
+                            <HashLink to={'#banner'}
+                                scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
+                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" > N</HashLink>
+                            <HashLink to={'#banner'}
+                                scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
+                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow">Neamul</HashLink>
                         </div>
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4">
 
-                                <HashLink to="/path#skills"
+                                <HashLink to="#skills"
                                     scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Skills</HashLink>
 
-                                <HashLink to="/path#projects"
+                                <HashLink to="#projects"
                                     scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</HashLink>
 
-                                <HashLink to="/path#contact"
+                                <HashLink to="#contact"
                                     scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</HashLink>
 
-                                <HashLink to="/path#hash"
+                                <HashLink to="#hash"
                                     scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</HashLink>
                             </div>
                         </div>
@@ -51,23 +54,7 @@ const Navbar = () => {
 
 
                         {/* <!-- Profile dropdown --> */}
-                        <div className="ml-3 relative" onClick={() => setShowState(!showState)}>
-                            <div>
-                                <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                    <span className="sr-only">Open user menu</span>
-                                    <img className="h-8 w-8 rounded-full" src="Noman.jpg" alt="" />
-                                </button>
-                            </div>
 
-                            {
-                                showState && <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                                    {/* <!-- Active: "bg-gray-100", Not Active: "" --> */}
-                                    <a href="!#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                                    <a href="!#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                                    <a href="!#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-                                </div>
-                            }
-                        </div>
                     </div>
                 </div>
             </div>

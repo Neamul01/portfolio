@@ -1,17 +1,23 @@
 import './App.css';
 import "swiper/css/bundle";
 import Home from './components/Home/Home';
-import Footer from './components/Home/Footer';
 import Navbar from './components/Home/Navbar';
+import Footer from './components/Home/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/Admin/Login';
 
 
 function App() {
-  return (
+  return (<>
     <div className="App">
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='admin' element={<Login />} />
+      </Routes>
       <Footer />
     </div>
+  </>
   );
 }
 

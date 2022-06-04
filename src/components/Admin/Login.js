@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+
 import auth from '../../firebase.init';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
@@ -8,13 +10,10 @@ import LoadingSpinner from '../Shared/LoadingSpinner';
 import SocialLogin from './SocialLogin';
 
 const Login = () => {
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [email, setEmail] = useState('');
 
     const navigate = useNavigate();
 
@@ -24,15 +23,23 @@ const Login = () => {
         toast.success('Login successfull...')
     };
 
+    const handleForgotPass = (e) => {
+        e.preventDefault()
+        if (email) {
+            sendPasswordResetEmail(email)
+            toast.success('Reset Eamil Sent..!!')
+        }
+    }
+
     useEffect(() => {
         if (user) {
             navigate('/')
         }
     }, [user, navigate])
-    if (error) {
+    if (error || resetError) {
         toast.error(error?.message)
     }
-    if (loading) {
+    if (loading || sending) {
         return <LoadingSpinner />
     }
 
@@ -45,13 +52,14 @@ const Login = () => {
                     <label htmlFor="username" className="block text-sm text-gray-800 dark:text-gray-200 text-left">Email</label>
                     <input type="email"
                         {...register("email")}
+                        onBlur={e => setEmail(e.target.value)}
                         className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
                 <div className="mt-4">
                     <div className="flex items-center justify-between">
                         <label htmlFor="password" className="block text-sm text-gray-800 dark:text-gray-200">Password</label>
-                        <a href="!#" className="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forget Password?</a>
+                        <p onClick={(e) => handleForgotPass(e)} className="text-xs text-gray-600 dark:text-gray-400 hover:underline cursor-pointer">Forget Password?</p>
                     </div>
 
                     <input type="password"
@@ -60,10 +68,9 @@ const Login = () => {
                 </div>
 
                 <div className="mt-6">
-                    <button
-                        className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-                        Login
-                    </button>
+                    <input
+                        type='submit'
+                        className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" value='Login' />
                 </div>
             </form>
             <SocialLogin />

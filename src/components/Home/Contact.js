@@ -68,7 +68,7 @@ const Contact = () => {
     return (
 
         <section id='contact' className="bg-[#FAF0D765] dark:bg-gray-900">
-            <div className="container px-4 py-16 mx-auto lg:flex flex-col md:flex-row lg:items-center md:gap-8">
+            <div className="container px-4 py-16 mx-auto lg:flex flex-col md:flex-row lg:items-center lg:justify-center md:gap-8">
                 <h2 className="text-3xl min-w-fit font-semibold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
                     Feel free to message me.
                 </h2>
@@ -78,13 +78,14 @@ const Contact = () => {
                     onSubmit={handleSubmit}
                     method="POST"
                     target="_blank"
+                    className='w-full md:px-24 md:py-8 px-8 flex flex-col'
                 >
-                    <div className="mb-3 pt-0">
+                    <div className="mb-3 pt-0 w-full">
                         <input
                             type="text"
                             placeholder="Your name"
                             name="name"
-                            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+                            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
                             required
                         />
                     </div>
@@ -93,7 +94,7 @@ const Contact = () => {
                             type="email"
                             placeholder="Email"
                             name="email"
-                            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+                            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
                             required
                         />
                     </div>
@@ -101,7 +102,8 @@ const Contact = () => {
                         <textarea
                             placeholder="Your message"
                             name="message"
-                            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+                            rows={5}
+                            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
                             required
                         />
                     </div>
@@ -110,7 +112,7 @@ const Contact = () => {
                             className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="submit"
                         >
-                            Send a message
+                            Submit
                         </button>
                     </div>
                 </form>

@@ -3,6 +3,11 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import auth from '../../firebase.init';
+import { FaTools } from 'react-icons/fa';
+import { GoProject } from 'react-icons/go';
+import { AiFillContacts } from 'react-icons/ai';
+import { FaFileDownload } from 'react-icons/fa';
+import { AiFillDashboard } from 'react-icons/ai';
 
 const Navbar = () => {
     const [showMoble, setShowMoble] = useState(false);
@@ -10,7 +15,7 @@ const Navbar = () => {
 
     return (
         <nav className="flex flex-col h-screen pt-8 border-r dark:bg-gray-800 dark:border-gray-600 bg-neutral">
-            <div className="max-w-7xl h-screen mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="max-w-7xl h-screen mx-auto">
                 <div className="relative  flex items-center justify-between ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         {/* <!-- Mobile menu button--> */}
@@ -29,33 +34,55 @@ const Navbar = () => {
                         </button>
                     </div>
                     {/* desktop */}
-                    <div className="flex-1 flex flex-col gap-24 items-center justify-center  left-0 sm:items-stretch sm:justify-between">
-                        <div className="flex-shrink-0 flex items-center">
+                    <div className="flex-1 flex flex-col gap-24 items-center justify-center  left-0 sm:items-stretch sm:justify-center">
+                        <div className="flex-shrink-0 flex justify-center w-20 h-auto items-center">
                             <HashLink to={'/#'}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" > </HashLink>
+                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" >
+                            </HashLink>
                             <HashLink to={'/#'}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow"><img className='w-16' src="logo.svg" alt="logo" /></HashLink>
+                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow"><img className='w-full' src="logo.svg" alt="logo" />
+                            </HashLink>
                         </div>
                         <div className="hidden sm:block sm:text-left">
-                            <div className="flex flex-col space-x-4">
+                            <div className="flex flex-col justify-center items-center space-x-4">
 
-                                <HashLink to="#skills"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white py-2 px-0 ml-4 rounded-md text-sm font-medium" aria-current="page">Skills
-                                </HashLink>
+                                <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer'>
+                                    <HashLink to="#skills"
+                                        scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:text-white rounded-md text-sm font-medium" aria-current="page"><FaTools className='text-4xl' />
+                                        {/* Skills */}
+                                    </HashLink>
+                                </div>
 
-                                <HashLink to="#projects"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">Projects
-                                </HashLink>
+                                <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer' style={{ margin: '0' }}>
+                                    <HashLink to="#projects"
+                                        scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:text-white rounded-md text-sm font-medium"><GoProject className='text-4xl' />
+                                        {/* Projects */}
+                                    </HashLink>
+                                </div>
 
-                                <HashLink to="#contact"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">Contact
-                                </HashLink>
+                                <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer' style={{ margin: '0' }}>
+                                    <HashLink to="#contact"
+                                        scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:text-white rounded-md text-sm font-medium"><AiFillContacts className='text-4xl' />
+                                        {/* Contact */}
+                                    </HashLink>
+                                </div>
+
+                                <div className='flex justify-center items-center' style={{ margin: '0' }}>
+                                    <a href='https://drive.google.com/uc?export=download&id=1ZAVzdEyZqOrMH31bMF19ClDXuhh9VxIA' className="btn  my-4 bg-orange-500 border-none hover:bg-orange-600 text-white custom-animation hover:border-none"><FaFileDownload className='text-3xl' />
+                                        {/* Download Resume */}
+                                    </a>
+                                </div>
+
                                 {
                                     user
                                     &&
-                                    <Link to='/dashboard' className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">Dashboard</Link>
+                                    <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer' style={{ margin: '0' }}>
+                                        <Link to='/dashboard' className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">
+                                            <AiFillDashboard className='text-4xl' />
+                                        </Link>
+                                    </div>
                                 }
 
                             </div>

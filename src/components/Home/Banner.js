@@ -27,7 +27,6 @@ const Banner = () => {
                                 repeat={Infinity}
                             />
                         </span>
-                        {/* <span className='italic'>I am Neamul</span> <br /> <span className='text-secondary block py-6 '>MERN Stack Web Developer</span> */}
                     </h1>
                     <div className='text-effect'></div>
                     <p className="py-6 pr-44 font-mono">

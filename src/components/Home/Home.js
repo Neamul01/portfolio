@@ -7,7 +7,7 @@ import Skills from './Skills';
 
 const Home = () => {
     return (
-        <div>
+        <div className='h-screen overflow-hidden overflow-y-scroll w-full' >
             <Banner />
             <Skills />
             <Projects />

@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <div className='flex'>
         <Navbar />
-        <div>
+        <div className='w-full'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='admin' element={<Login />} />

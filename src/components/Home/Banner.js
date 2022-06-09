@@ -21,6 +21,8 @@ const Banner = () => {
                                     'Junior React Developer',
                                     3000,
                                     'MERN Stack Web Developer',
+                                    3000,
+                                    'Deep Learner',
                                     3000
                                 ]}
                                 wrapper="a"

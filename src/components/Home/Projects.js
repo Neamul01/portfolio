@@ -13,8 +13,10 @@ const Projects = () => {
                 <div className=" w-full grid grid-flow-row  justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 md:mt-24 md:gap-8 cursor-zoom-in">
                     <div className="bg-base-100 shadow-2xl pb-4 rounded-md relative  max-w-[300px] custom-style-parent">
                         <div className=' max-h-[300px] max-w-full overflow-hidden'>
-                            <div className="text-success bg-white absolute custom-style flex items-center justify-center">
-                                <button className='px-8 py-2 rounded-md bg-neutral text-white font-bold'>Visit</button>
+                            <div className="bg-white absolute custom-style flex flex-col items-center justify-center text-white">
+                                <p className='text-xl font-bold'>Gadget Hub</p>
+                                <p>Gadget store based website...</p>
+                                <button className='btn btn-secondary'>Visit</button>
                             </div>
                             <figure className="px-4 py-4">
                                 <img src={work1} alt="Shoes" className="rounded-none " />
@@ -24,8 +26,10 @@ const Projects = () => {
 
                     <div className="bg-base-100 shadow-2xl pb-4 rounded-md relative  max-w-[300px] custom-style-parent">
                         <div className=' max-h-[300px] max-w-full overflow-hidden'>
-                            <div className="text-success bg-white absolute custom-style flex items-center justify-center">
-                                <button className='px-8 py-2 rounded-md bg-neutral text-white font-bold'>Visit</button>
+                            <div className="bg-white absolute custom-style flex flex-col items-center justify-center text-white">
+                                <p className='text-xl font-bold'>N&N Industries</p>
+                                <p>Warehouse management based website...</p>
+                                <button className='btn btn-secondary'>Visit</button>
                             </div>
                             <figure className="px-4 py-4">
                                 <img src={work2} alt="Shoes" className="rounded-none " />
@@ -35,8 +39,10 @@ const Projects = () => {
 
                     <div className="bg-base-100 shadow-2xl pb-4 rounded-md relative  max-w-[300px] custom-style-parent">
                         <div className=' max-h-[300px] max-w-full overflow-hidden'>
-                            <div className="text-success bg-white absolute custom-style flex items-center justify-center">
-                                <button className='px-8 py-2 rounded-md bg-neutral text-white font-bold'>Visit</button>
+                            <div className="bg-white absolute custom-style flex flex-col items-center justify-center text-white">
+                                <p className='text-xl font-bold'>Travel Master</p>
+                                <p>A travel guide's website...</p>
+                                <button className='btn btn-secondary'>Visit</button>
                             </div>
                             <figure className="px-4 py-4">
                                 <img src={work3} alt="Shoes" className="rounded-none " />
@@ -44,6 +50,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
+                <button className="mt-12 text-secondary">View More Projects..</button>
             </div>
         </section>
     );

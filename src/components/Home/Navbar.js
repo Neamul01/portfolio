@@ -37,40 +37,50 @@ const Navbar = () => {
                     <div className="flex-1 flex flex-col gap-24 items-center justify-center  left-0 sm:items-stretch sm:justify-center">
                         <div className="flex-shrink-0 flex justify-center w-20 h-auto items-center">
                             <HashLink to={'/#'}
+                                data-tip="Home"
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" >
+                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl tooltip tooltip-right tooltip-secondary" alt="Logo" >
                             </HashLink>
                             <HashLink to={'/#'}
+                                data-tip="Home"
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow"><img className='w-full' src="logo.svg" alt="logo" />
+                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl tooltip tooltip-right tooltip-secondary" alt="Logo"><img className='w-full' src="logo.svg" alt="logo" />
                             </HashLink>
                         </div>
                         <div className="hidden sm:block sm:text-left">
                             <div className="flex flex-col justify-center items-center space-x-4">
 
-                                <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer'>
+                                <div
+                                    data-tip="Skills"
+                                    className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer tooltip tooltip-right tooltip-secondary'>
                                     <HashLink to="#skills"
                                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:text-white rounded-md text-sm font-medium" aria-current="page"><FaTools className='text-4xl' />
                                         {/* Skills */}
                                     </HashLink>
                                 </div>
 
-                                <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer' style={{ margin: '0' }}>
+                                <div
+                                    data-tip="Projects"
+                                    className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer tooltip tooltip-right tooltip-secondary' style={{ margin: '0' }}>
                                     <HashLink to="#projects"
                                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:text-white rounded-md text-sm font-medium"><GoProject className='text-4xl' />
                                         {/* Projects */}
                                     </HashLink>
                                 </div>
 
-                                <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer' style={{ margin: '0' }}>
+                                <div
+                                    data-tip="Contact"
+                                    className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer tooltip tooltip-right tooltip-secondary' style={{ margin: '0' }}>
                                     <HashLink to="#contact"
                                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:text-white rounded-md text-sm font-medium"><AiFillContacts className='text-4xl' />
                                         {/* Contact */}
                                     </HashLink>
                                 </div>
 
-                                <div className='flex justify-center items-center' style={{ margin: '0' }}>
-                                    <a href='https://drive.google.com/uc?export=download&id=1ZAVzdEyZqOrMH31bMF19ClDXuhh9VxIA' className="btn  my-4 bg-orange-500 border-none hover:bg-orange-600 text-white custom-animation hover:border-none"><FaFileDownload className='text-3xl' />
+                                <div
+                                    data-tip="Download Resume"
+                                    className='flex justify-center items-center tooltip tooltip-right tooltip-secondary' style={{ margin: '0' }}>
+                                    <a href='https://drive.google.com/uc?export=download&id=1ZAVzdEyZqOrMH31bMF19ClDXuhh9VxIA' className="btn  my-4 bg-orange-500 border-none hover:bg-orange-400 text-white custom-animation hover:border-none"><FaFileDownload className='text-3xl' />
                                         {/* Download Resume */}
                                     </a>
                                 </div>
@@ -78,7 +88,9 @@ const Navbar = () => {
                                 {
                                     user
                                     &&
-                                    <div className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer' style={{ margin: '0' }}>
+                                    <div
+                                        data-tip="Dashboard"
+                                        className='hover:bg-gray-700 flex justify-center items-center  py-4 px-4 rounded-md cursor-pointer tooltip tooltip-right tooltip-secondary' style={{ margin: '0' }}>
                                         <Link to='/dashboard' className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">
                                             <AiFillDashboard className='text-4xl' />
                                         </Link>

@@ -9,9 +9,9 @@ const Navbar = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <nav className="bg-neutral sticky top-0 z-50 ">
-            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                <div className="relative flex items-center justify-between h-14">
+        <nav className="flex flex-col h-screen pt-8 border-r dark:bg-gray-800 dark:border-gray-600 bg-neutral">
+            <div className="max-w-7xl h-screen mx-auto px-2 sm:px-6 lg:px-8">
+                <div className="relative  flex items-center justify-between ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         {/* <!-- Mobile menu button--> */}
                         <button
@@ -28,33 +28,34 @@ const Navbar = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
+                    {/* desktop */}
+                    <div className="flex-1 flex flex-col gap-24 items-center justify-center  left-0 sm:items-stretch sm:justify-between">
                         <div className="flex-shrink-0 flex items-center">
                             <HashLink to={'/#'}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" > N</HashLink>
+                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl" alt="Workflow" > </HashLink>
                             <HashLink to={'/#'}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow">Neamul</HashLink>
+                                className="hidden lg:block h-8 w-auto text-white font-bold text-3xl" alt="Workflow"><img className='w-16' src="logo.svg" alt="logo" /></HashLink>
                         </div>
-                        <div className="hidden sm:block sm:ml-6">
-                            <div className="flex space-x-4">
+                        <div className="hidden sm:block sm:text-left">
+                            <div className="flex flex-col space-x-4">
 
                                 <HashLink to="#skills"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Skills
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white py-2 px-0 ml-4 rounded-md text-sm font-medium" aria-current="page">Skills
                                 </HashLink>
 
                                 <HashLink to="#projects"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">Projects
                                 </HashLink>
 
                                 <HashLink to="#contact"
-                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact
+                                    scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">Contact
                                 </HashLink>
                                 {
                                     user
                                     &&
-                                    <Link to='/dashboard' className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</Link>
+                                    <Link to='/dashboard' className="text-white hover:bg-gray-700 hover:text-white  py-2 px-0 ml-0 rounded-md text-sm font-medium">Dashboard</Link>
                                 }
 
                             </div>

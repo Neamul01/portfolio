@@ -24,7 +24,7 @@ const Banner = () => {
                                     3000
                                 ]}
                                 wrapper="a"
-                                repeat={3}
+                                repeat={Infinity}
                             />
                         </span>
                         {/* <span className='italic'>I am Neamul</span> <br /> <span className='text-secondary block py-6 '>MERN Stack Web Developer</span> */}

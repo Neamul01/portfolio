@@ -14,8 +14,8 @@ const Navbar = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <nav className="flex flex-col h-screen pt-8 border-r dark:bg-gray-800 dark:border-gray-600 bg-neutral">
-            <div className="max-w-7xl h-screen mx-auto">
+        <nav className="flex flex-col h-screen pt-8 bg-transparent z-50">
+            <div className="max-w-7xl sm:h-screen mb-5 mx-0">
                 <div className="relative  flex items-center justify-between ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         {/* <!-- Mobile menu button--> */}
@@ -36,11 +36,12 @@ const Navbar = () => {
                     {/* desktop */}
                     <div className="flex-1 flex flex-col gap-24 items-center justify-center  left-0 sm:items-stretch sm:justify-center">
                         <div className="flex-shrink-0 flex justify-center w-20 h-auto items-center">
-                            <HashLink to={'/#'}
+                            {/* <HashLink to={'/#'}
                                 data-tip="Home"
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-                                className="block lg:hidden h-8 w-auto text-white font-bold text-3xl tooltip tooltip-right tooltip-secondary" alt="Logo" >
-                            </HashLink>
+                                className="block lg:hidden h-2 w-14 text-white font-bold text-3xl tooltip tooltip-right tooltip-secondary" alt="Logo" >
+                                <img className='w-full' src="logo.svg" alt="logo" />
+                            </HashLink> */}
                             <HashLink to={'/#'}
                                 data-tip="Home"
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
@@ -107,7 +108,7 @@ const Navbar = () => {
             {
                 showMoble
                 &&
-                <div className="sm:hidden" id="mobile-menu">
+                <div className="sm:hidden bg-primary" id="mobile-menu">
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                         <a href="!#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>

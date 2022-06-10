@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
 import Contact from './Contact';
+import Navbar from './Navbar';
 import Projects from './Projects';
 import Skills from './Skills';
 // import WorkSlider from './WorkSlider';
@@ -8,11 +9,16 @@ import Skills from './Skills';
 const Home = () => {
     return (
         <div className='h-screen overflow-hidden overflow-y-scroll w-full' >
-            <Banner />
-            <Skills />
-            <Projects />
-            {/* <WorkSlider /> */}
-            <Contact />
+            <div className='fixed z-30'>
+                <Navbar />
+            </div>
+            <div className='z-0'>
+                <Banner />
+                <Skills />
+                <Projects />
+                {/* <WorkSlider /> */}
+                <Contact />
+            </div>
         </div>
     );
 };

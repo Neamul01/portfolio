@@ -7,19 +7,19 @@ const Skills = () => {
 
                 <div className=" w-full grid grid-cols-1 gap-4 mt-12 md:mt-24 md:gap-2">
                     <label htmlFor="" className='text-black text-left'>React</label>
-                    <progress className="progress progress-primary w-1/2" value="60" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="60" max="100"></progress>
                     <label htmlFor="" className='text-black text-left'>Express</label>
-                    <progress className="progress progress-primary w-1/2" value="30" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="30" max="100"></progress>
                     <label htmlFor="" className='text-black text-left'>MongoDB</label>
-                    <progress className="progress progress-primary w-1/2" value="40" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="40" max="100"></progress>
                     <label htmlFor="" className='text-black text-left'>Tailwind</label>
-                    <progress className="progress progress-primary w-1/2" value="90" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="90" max="100"></progress>
                     <label htmlFor="" className='text-black text-left'>Bootstrap</label>
-                    <progress className="progress progress-primary w-1/2" value="80" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="80" max="100"></progress>
                     <label htmlFor="" className='text-black text-left'>CSS3</label>
-                    <progress className="progress progress-primary w-1/2" value="70" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="70" max="100"></progress>
                     <label htmlFor="" className='text-black text-left'>HTML</label>
-                    <progress className="progress progress-primary w-1/2" value="80" max="100"></progress>
+                    <progress className="progress progress-primary w-full h-4" value="80" max="100"></progress>
                     <p className="text-success text-left mt-6">And Many More...</p>
 
                 </div>

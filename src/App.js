@@ -1,7 +1,7 @@
 import './App.css';
 import "swiper/css/bundle";
 import Home from './components/Home/Home';
-import Navbar from './components/Home/Navbar';
+// import Navbar from './components/Home/Navbar';
 // import Footer from './components/Home/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/Admin/Login';
@@ -14,7 +14,7 @@ function App() {
   return (<>
     <div className="App">
       <div className='flex'>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className='w-full'>
           <Routes>
             <Route path='/' element={<Home />} />

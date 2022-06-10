@@ -13,17 +13,13 @@ import Dashboard from './components/Admin/Dashboard';
 function App() {
   return (<>
     <div className="App">
-      <div className='flex'>
-        {/* <Navbar /> */}
-        <div className='w-full'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='admin' element={<Login />} />
-            <Route path='signup' element={<Signup />} />
-            <Route path='dashboard' element={<Dashboard />} />
-          </Routes>
-        </div>
-      </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+
+        <Route path='admin' element={<Login />} />
+        <Route path='signup' element={<Signup />} />
+        <Route path='dashboard' element={<Dashboard />} />
+      </Routes>
       {/* <Footer /> */}
       <Toaster />
     </div>

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Gadget Hub",
+        "details": "Gadget store based website",
+        "image": "./banner.jpg"
+    },
+    {
+        "id": 2,
+        "name": "N&N Industries",
+        "details": "Warehouse management based website",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "name": "Travel Master",
+        "details": "A travel guide's website",
+        "image": ""
+    }
+]

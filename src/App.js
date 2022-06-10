@@ -8,6 +8,7 @@ import Login from './components/Admin/Login';
 import { Toaster } from 'react-hot-toast';
 import Signup from './components/Admin/Signup';
 import Dashboard from './components/Admin/Dashboard';
+import ProjectDetails from './components/Home/ProjectDetails';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Home />} />
-
+        <Route path='project/:id' element={<ProjectDetails />} />
         <Route path='admin' element={<Login />} />
         <Route path='signup' element={<Signup />} />
         <Route path='dashboard' element={<Dashboard />} />

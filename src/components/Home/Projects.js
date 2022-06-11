@@ -1,20 +1,11 @@
 import React from 'react';
-import work1 from '../images/work1.png'
-import work2 from '../images/2.png'
-import work3 from '../images/3.png'
 import './Projects.css'
-import { useState } from 'react';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import useFetchdata from '../hooks/useFetchdata';
 
 const Projects = () => {
-    const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-        fetch('projects.json')
-            .then(res => res.json())
-            .then(data => setProjects(data))
-    }, [])
+    const [projects] = useFetchdata();
+    console.log(projects)
 
     return (
         <section id='projects' className="bg-white dark:bg-gray-900  text-white">
@@ -32,7 +23,7 @@ const Projects = () => {
                                     <Link to={`/project/${project.id}`} className='btn btn-secondary'>Visit</Link>
                                 </div>
                                 <figure className="px-4 py-4">
-                                    <img src={work1} alt="Shoes" className="rounded-none " />
+                                    <img src={project?.image} alt="Shoes" className="rounded-none " />
                                 </figure>
                             </div>
                         </div>)

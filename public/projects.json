@@ -3,18 +3,18 @@
         "id": 1,
         "name": "Gadget Hub",
         "details": "Gadget store based website",
-        "image": "./banner.jpg"
+        "image": "https://i.ibb.co/D9JYy0Q/2.png"
     },
     {
         "id": 2,
         "name": "N&N Industries",
         "details": "Warehouse management based website",
-        "image": ""
+        "image": "https://i.ibb.co/5Tx2LTJ/3.png"
     },
     {
         "id": 3,
         "name": "Travel Master",
         "details": "A travel guide's website",
-        "image": ""
+        "image": "https://i.ibb.co/k6xK4Lv/work1.png"
     }
 ]

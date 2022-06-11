@@ -1,0 +1,54 @@
+import React from 'react';
+
+const Blogs = () => {
+    return (
+        <section id='projects' className="bg-white dark:bg-gray-900  text-white">
+            <div className="container w-full px-6 py-10 mx-auto ">
+                <h1 className="text-3xl min-w-max font-semibold text-center text-gray-700 capitalize lg:text-5xl dark:text-white font-serif"><span className="text-blue-500 hover:italic cursor-move">Blogs</span></h1>
+
+                <div className=" w-full grid grid-flow-row  justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 md:mt-24 md:gap-8 cursor-zoom-in">
+                    <h2 className="text-center text-2xl text-secondary">Comming soon...</h2>
+
+                    {/* <div class="card w-96 bg-primary text-primary-content">
+                        <div class="card-body">
+                            <h2 class="card-title">Comming soon...</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn">Buy Now</button>
+                            </div>
+                        </div>
+                    </div> */}
+
+                    {/* <div className="bg-base-100 shadow-2xl pb-4 rounded-md relative  max-w-[300px] custom-style-parent">
+                        <div className=' max-h-[300px] max-w-full overflow-hidden'>
+                            <div className="bg-white absolute custom-style flex flex-col items-center justify-center text-white">
+                                <p className='text-xl font-bold'>N&N Industries</p>
+                                <p>Warehouse management based website...</p>
+                                <button className='btn btn-secondary'>Visit</button>
+                            </div>
+                            <figure className="px-4 py-4">
+                                <img src={work2} alt="Shoes" className="rounded-none " />
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div className="bg-base-100 shadow-2xl pb-4 rounded-md relative  max-w-[300px] custom-style-parent">
+                        <div className=' max-h-[300px] max-w-full overflow-hidden'>
+                            <div className="bg-white absolute custom-style flex flex-col items-center justify-center text-white">
+                                <p className='text-xl font-bold'>Travel Master</p>
+                                <p>A travel guide's website...</p>
+                                <button className='btn btn-secondary'>Visit</button>
+                            </div>
+                            <figure className="px-4 py-4">
+                                <img src={work3} alt="Shoes" className="rounded-none " />
+                            </figure>
+                        </div>
+                    </div> */}
+                </div>
+                {/* <button className="mt-12 text-secondary">View More Projects..</button> */}
+            </div>
+        </section>
+    );
+};
+
+export default Blogs;

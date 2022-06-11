@@ -2,19 +2,19 @@
     {
         "id": 1,
         "name": "Gadget Hub",
-        "details": "Gadget store based website",
+        "details": "Gadget store based website. In this site a user can add a product , see his/her products and also delete his/her product. He can also see all the products available in this site and delete them.",
         "image": "https://i.ibb.co/D9JYy0Q/2.png"
     },
     {
         "id": 2,
         "name": "N&N Industries",
-        "details": "Warehouse management based website",
+        "details": "Warehouse management based website. Users 1.Can order a product, 2.Can pay for an order, 3.see his/her profile and update, 4.see his/ her orders and payment status, 5.see transactionId, etc.Admin 1.can add a product, 2.can remove a product, 3.can make another one an admin, 4. deliver orders. etc",
         "image": "https://i.ibb.co/5Tx2LTJ/3.png"
     },
     {
         "id": 3,
         "name": "Travel Master",
-        "details": "A travel guide's website",
+        "details": "A travel guide's website. It is a Travel Guide Website. Here I try to give a overview about a guide. In 'Home' page I try to give guide's price and his 'Last 3 Travel'.In 'Checkout' page it is a protected route, only log in persons can go in this section and they can check and submit the service they want.In 'About' page I try to give some details About me with my social media link",
         "image": "https://i.ibb.co/k6xK4Lv/work1.png"
     }
 ]
